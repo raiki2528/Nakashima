@@ -1,0 +1,76 @@
+/* サイト全体のデザイン設定。ここをカスタマイズすると簡単に見た目を変えられます */
+:root {
+--bg: #0b0d12; /* 全体の背景色 */
+--bg-soft: #0f131b; /* ボタンなどの少し明るい背景色 */
+--text: #e6e9ef; /* 基本の文字色 */
+--muted: #9aa3b2; /* 少し薄い文字色 */
+--accent: #6ea8fe; /* アクセントカラー（リンクなど） */
+--ring: rgba(110,168,254,.35); /* フォーカス時のリング色 */
+--page-max: 960px;
+--page-pad: clamp(24px, 6vw, 48px);
+}
+
+/* --- 以下、基本的には編集不要です --- */
+
+* { box-sizing: border-box; }
+html, body { height: 100%; }
+body { margin: 0; font-family: 'Inter', system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji"; background: radial-gradient(1200px 800px at 50% -10%, #141a24 0%, var(--bg) 55%) no-repeat fixed; color: var(--text); -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; display: flex; flex-direction: column; }
+.site-header { margin-top: 28px; }
+.hero {
+max-width: var(--page-max);
+width: calc(100% - (var(--page-pad) * 2));
+margin: 0 auto;
+/* 編集: ヘッダーの背景画像 */
+background: url('images/Nakashima_Background.jpeg') center/cover no-repeat, linear-gradient(180deg, rgba(11,13,18,.3), rgba(11,13,18,.5));
+border: 3px solid rgba(255,255,255,.08);
+border-radius: 24px;
+}
+.hero-inner { display: flex; align-items: flex-end; gap: 16px; padding: 28px var(--page-pad); min-height: 160px; }
+.profile-section { max-width: var(--page-max); width: 100%; margin: 0 auto; text-align: center; display: flex; flex-direction: column; align-items: center; gap: 16px; padding: 24px var(--page-pad) 0px; }
+.profile-avatar { width: 128px; height: 128px; border-radius: 999px; object-fit: cover; border: 3px solid rgba(255,255,255,.85); box-shadow: 0 8px 30px rgba(0,0,0,.45); background: #111; }
+.identity-name { text-align: center; }
+.identity-name { margin: 0; font-size: 18px; font-weight: 700; letter-spacing: .2px; }
+.identity-name .latin { margin-left: 8px; font-weight: 600; opacity: .9; }
+.identity-title { margin: 4px 0 0; color: var(--muted); font-size: 14px; }
+.identity-subtitle { margin: 2px 0 0; color: var(--muted); font-size: 13px; }
+.card { display: block; text-align: center; padding: 28px var(--page-pad) 24px; }
+main.card { flex: 1 0 auto; }
+.footer { flex-shrink: 0; margin-top: 12px; color: var(--muted); text-align: center; padding-bottom: 12px; }
+.intro { display: grid; gap: 4px; max-width: 40ch; margin: 0 auto 0; color: var(--text); text-align: center; justify-items: center; }
+.intro-title { margin: 0 0 6px; font-size: 18px; font-weight: 700; color: #ffffff; }
+.intro p { margin: 0; line-height: 1.7; color: var(--muted); text-align: center; }
+.intro p:first-child { color: var(--muted); font-weight: inherit; }
+.intro strong { color: var(--muted); font-weight: inherit; }
+.sns { margin: 18px auto 0; max-width: 640px; padding: 0 var(--page-pad); }
+.sns-grid { display: flex; justify-content: center; align-items: center; gap: 10px; }
+.sns-btn { display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 6px; width: 80px; height: 80px; border-radius: 14px; background: #ffffff; border: 1px solid rgba(255,255,255,.12); color: #111827; text-decoration: none; font-weight: 600; transition: transform .15s ease; text-align: center; }
+.sns-btn img { width: clamp(24px, 30%, 40px); height: auto; object-fit: contain; display: block; margin: 0 auto; }
+.sns-btn .label { font-size: 12px; line-height: 1; color: #111827; }
+.sns-btn:hover { transform: translateY(-1px); }
+.japan-section { margin: 20px auto 0; max-width: 640px; padding: 0 var(--page-pad); text-align: center; }
+.japan-image { width: 100%; max-width: 400px; height: auto; border-radius: 16px; box-shadow: 0 8px 30px rgba(0,0,0,.3); }
+.line-section { margin: 20px auto 0; max-width: 640px; padding: 0 var(--page-pad); text-align: center; }
+.line-image { width: 60%; max-width: 240px; height: auto; border-radius: 16px; box-shadow: 0 8px 30px rgba(0,0,0,.3); }
+.share-section { padding: 20px var(--page-pad) 0; }
+.button-group { display: flex; flex-direction: column; gap: 12px; }
+.share-btn, .install-btn { width: 100%; display: flex; align-items: center; justify-content: center; gap: 8px; padding: 16px 24px; border: none; border-radius: 16px; color: white; font-size: 16px; font-weight: 600; cursor: pointer; transition: all 0.2s ease; }
+.share-btn { background: linear-gradient(135deg, var(--accent) 0%, #5a96e8 100%); box-shadow: 0 4px 12px rgba(110, 168, 254, 0.3); }
+.share-btn:hover { transform: translateY(-2px); box-shadow: 0 6px 20px rgba(110, 168, 254, 0.4); }
+.install-btn { background: linear-gradient(135deg, var(--accent) 0%, #5a96e8 100%); box-shadow: 0 4px 12px rgba(110, 168, 254, 0.3); }
+.install-btn:hover { transform: translateY(-2px); box-shadow: 0 6px 20px rgba(110, 168, 254, 0.4); }
+.schedule { margin-top: 20px; line-height: 1.6; }
+.schedule a { color: var(--accent); text-decoration: none; font-weight: 600; }
+.schedule a:hover { text-decoration: underline; }
+/* 画像拡大モーダル */
+.modal { display: none; position: fixed; z-index: 1000; left: 0; top: 0; width: 100%; height: 100%; background-color: rgba(0,0,0,0.9); }
+.modal-content { margin: auto; display: block; width: 80%; max-width: 700px; max-height: 80%; object-fit: contain; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); }
+#caption { margin: auto; display: block; width: 80%; max-width: 700px; text-align: center; color: #ccc; padding: 10px 0; height: 150px; position: absolute; bottom: 20px; left: 50%; transform: translateX(-50%); }
+.close { position: absolute; top: 15px; right: 35px; color: #f1f1f1; font-size: 40px; font-weight: bold; transition: 0.3s; cursor: pointer; }
+.close:hover, .close:focus { color: #bbb; text-decoration: none; }
+.clickable-image { cursor: pointer; transition: transform 0.2s ease; }
+.clickable-image:hover { transform: scale(1.02); }
+.clickable-background { cursor: pointer; transition: transform 0.2s ease; }
+.clickable-background:hover { transform: scale(1.01); }
+
+@media (max-width: 400px) { .sns-grid { gap: 8px; } }
+@media (min-width: 480px) { .hero-inner { padding: 32px 24px; min-height: 200px; } .identity-name { font-size: 20px; } .identity-title { font-size: 15px; } .hero-avatar { width: 144px; height: 144px; } }
