@@ -11,8 +11,8 @@ const urlsToCache = [
 '/images/Nakashima_Icon.jpg',
 '/images/Nakashima_Background.jpeg',
 '/images/Instagram copy.png',
+'/images/LINE.png',
 '/images/Japan.JPG',
-'/images/Nakashima_LINE.jpg',
 '/icons/icon-192x192.png',
 '/icons/icon-512x512.png'
 ];

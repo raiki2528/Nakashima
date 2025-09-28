@@ -30,7 +30,7 @@ border-radius: 24px;
 .profile-avatar { width: 128px; height: 128px; border-radius: 999px; object-fit: cover; border: 3px solid rgba(255,255,255,.85); box-shadow: 0 8px 30px rgba(0,0,0,.45); background: #111; }
 .identity-name { text-align: center; }
 .identity-name { margin: 0; font-size: 18px; font-weight: 700; letter-spacing: .2px; }
-.identity-name .latin { margin-left: 8px; font-weight: 600; opacity: .9; }
+.identity-name .latin { margin-left: 0; font-weight: 600; opacity: .9; font-size: 0.8em; }
 .identity-title { margin: 4px 0 0; color: var(--muted); font-size: 14px; }
 .identity-subtitle { margin: 2px 0 0; color: var(--muted); font-size: 13px; }
 .card { display: block; text-align: center; padding: 28px var(--page-pad) 24px; }
@@ -42,15 +42,13 @@ main.card { flex: 1 0 auto; }
 .intro p:first-child { color: var(--muted); font-weight: inherit; }
 .intro strong { color: var(--muted); font-weight: inherit; }
 .sns { margin: 18px auto 0; max-width: 640px; padding: 0 var(--page-pad); }
-.sns-grid { display: flex; justify-content: center; align-items: center; gap: 10px; }
+.sns-grid { display: flex; justify-content: center; align-items: center; gap: 20px; }
 .sns-btn { display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 6px; width: 80px; height: 80px; border-radius: 14px; background: #ffffff; border: 1px solid rgba(255,255,255,.12); color: #111827; text-decoration: none; font-weight: 600; transition: transform .15s ease; text-align: center; }
 .sns-btn img { width: clamp(24px, 30%, 40px); height: auto; object-fit: contain; display: block; margin: 0 auto; }
 .sns-btn .label { font-size: 12px; line-height: 1; color: #111827; }
 .sns-btn:hover { transform: translateY(-1px); }
 .japan-section { margin: 20px auto 0; max-width: 640px; padding: 0 var(--page-pad); text-align: center; }
 .japan-image { width: 100%; max-width: 400px; height: auto; border-radius: 16px; box-shadow: 0 8px 30px rgba(0,0,0,.3); }
-.line-section { margin: 20px auto 0; max-width: 640px; padding: 0 var(--page-pad); text-align: center; }
-.line-image { width: 60%; max-width: 240px; height: auto; border-radius: 16px; box-shadow: 0 8px 30px rgba(0,0,0,.3); }
 .share-section { padding: 20px var(--page-pad) 0; }
 .button-group { display: flex; flex-direction: column; gap: 12px; }
 .share-btn, .install-btn { width: 100%; display: flex; align-items: center; justify-content: center; gap: 8px; padding: 16px 24px; border: none; border-radius: 16px; color: white; font-size: 16px; font-weight: 600; cursor: pointer; transition: all 0.2s ease; }
