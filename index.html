@@ -42,7 +42,7 @@
         <img src="images/Instagram copy.png" alt="Instagram">
         <span class="label">Instagram</span>
       </a>
-      <a class="sns-btn" href="line://ti/p/ve7vbcQ0Zb" aria-label="LINE">
+      <a class="sns-btn" href="https://line.me/ti/p/ve7vbcQ0Zb" id="lineLink" target="_blank" rel="noopener" aria-label="LINE">
         <img src="images/LINE.png" alt="LINE">
         <span class="label">LINE</span>
       </a>
@@ -158,6 +158,25 @@ Chromeでウェブサイトを開く
 「ホーム画面に追加」を選択
 画面の指示に従い「追加」をタップ`;
     alert(instructions);
+  }
+
+  // LINEリンクの設定（モバイル対応）
+  const lineLink = document.getElementById('lineLink');
+  const isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+  
+  if (isMobile) {
+    // モバイルデバイスの場合、line://プロトコルを試す
+    lineLink.href = 'line://ti/p/ve7vbcQ0Zb';
+    lineLink.removeAttribute('target');
+    lineLink.removeAttribute('rel');
+    
+    // line://プロトコルが失敗した場合のフォールバック
+    lineLink.addEventListener('click', function(e) {
+      // 少し待ってからWeb版にリダイレクト
+      setTimeout(() => {
+        window.location.href = 'https://line.me/ti/p/ve7vbcQ0Zb';
+      }, 1000);
+    });
   }
 
   // イベントリスナーを設定
